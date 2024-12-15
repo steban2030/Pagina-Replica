@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #003365;
+}
+
+.logo img {
+  max-width: 250px;
+}
+
+.busqueda {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.busqueda input {
+  margin-right: 10px;
+}
+
+.inico_sesion {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-buttons{
+  background: #0f4f9f;
+  color: #ffffff;
+  padding: 5px;
+  border: #0f4f9f;
+  border-radius: 5px;
+}
+
+.write-button{
+  padding: 5px;
+  border: #0056b3;
+  border-radius: 5px;
+}
+
+/* nav */
+nav{
+  background-color: #002a49;
+  padding: 0 20px 20px 20px;
+  margin: 0;
+}
+
+.categorias {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-btn{
+  background-color: #0056b3;
+}
+
+nav a {
+  text-align: center;
+  font-size: 15px;
+  display: block;
+  padding: 4px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+nav a:hover {
+  background-color: #ffffff;
+  color: #002a49;
+}
+
+.dropdown-container {
+  margin: 2px 0 0 0;
+  display: grid;
+  background-color: #003365;
+  grid-template-columns: repeat(2, auto);
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  padding: 10px 20px;
+  background-color: #003365;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-btn:hover {
+  background-color: #0056b3;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+
+.eventos {
+  background-color: #003365;
+  text-align: center;
+  color: #ffffff;
+  padding: 5px;
+  margin: 10px 0;
+}
+
+.card-footer {
+  background-color: #0f4f9f;
+}
+
+footer {
+  background-color: #282f30;
+  color: #ffffff;
+  padding: 10px 0;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.menu-footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #1e2126;
+}
+
+.col a{
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: start;
+}
+
+.col a:hover{
+  color: #ffd12a;
+}
+
+.end-footer{
+  display: grid;
+  text-align: center;
+}
+
+.redes a {
+  display: inline-block;
+  align-items: center;
+  text-decoration: none;
+  color: #003365;
+  font-size: 14px;
+}
+
+.redes-iconos {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+
+@media (max-width: 1200px) {
+  .cards-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .categorias {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .categorias {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  header {
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+  }
+
+  .logo img {
+    max-width: 200px;
+  }
+
+  .busqueda input {
+    max-width: 100%;
+  }
+
+  .dropdown-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .categorias {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  header {
+    grid-template-columns: 1fr;
+  }
+
+  .busqueda {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .inico_sesion {
+    justify-content: center;
+  }
+
+  .menu-footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 15px;
+  }
+}
